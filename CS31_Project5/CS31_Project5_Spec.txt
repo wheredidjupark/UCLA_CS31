@@ -1,8 +1,6 @@
 Programming Assignment 5
 Mystery Word
 
-Time due: 9:00 PM Tuesday, November 15
-
 You have been contracted by the producers of the highly-rated Mystery Word TV game show to write a program that lets fans play a home version of the game. Here's how one round of the game works: The computer picks a mystery word of four to six letters and tells the player how many letters are in the word. The player tries to determine the mystery word by presenting the computer with a series of trial words. Each trial word is a four to six letter word. If the trial word is the mystery word, the player wins. Otherwise, the computer responds to the trial word with an integer from 0 to the length of the mystery word, indicating the number of letters in the trial word that are in the mystery word. For example, if the mystery word is EAGER, the response to the trial word GOOSE would be 2 (because of the G and one E), the response to EERIE would be 3 (the R and two Es), the response to GAME would be 3 (the G, the A, and the E), the response to BONUS would be 0 (no letters in common), and the response to AGREE or to GREASE would be 5 (one A, one G, one R, and two Es). The player's score for each round is the number of trial words needed to get the correct word (counting the trial word that matched the mystery word).
 
 Your program must start by asking the player how many rounds to play, and then play that many rounds of the game. After each round, the program must display some statistics about how well the player has played the rounds so far: the average score, the minimum score, and the maximum score.
@@ -138,3 +136,17 @@ A brief description of notable obstacles you overcame.
  A description of the design of your program. You should use pseudocode in this description where it clarifies the presentation.
 Your report does not need to describe the data you might use to test this program.
 By November 14, there will be links on the class webpage that will enable you to turn in your zip file electronically. Turn in the file by the due time above.
+
+Project 5 FAQ
+
+Given the spec's examples of loadWords implementations, can we assume that all of the words that loadWords puts into the array consist of only lower case letters?
+
+Yes.
+
+If the trial word is Hello, which has a character that is not a lower case letter (and thus by FAQ #1 will not be in the word list), what should the response be: Your trial word must be a word of 4 to 6 lower case letters or I don't know that word?
+
+Your trial word must be a word of 4 to 6 lower case letters
+
+Do we have to write pseudocode for your implementations of loadWords and randInt?
+
+No.
