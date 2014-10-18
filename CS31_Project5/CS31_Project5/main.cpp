@@ -93,7 +93,7 @@ int main()
 
 int loadWords(char words[][MAX_WORD_LENGTH+1], int maxWords)
 {
-    const char file_name[]= "/Users/wheredidjupark/Documents/CS/CS31_Project5/CS31_Project5/text.txt";
+    const char file_name[]= "/Users/wheredidjupark/Documents/CS/CS31/CS_Project5/CS31_Project5/text.txt";
     ifstream file_input(file_name); //file_input.open(file_name, ios::in); works fine as well after declaring the ifstream variable
     
     if(!file_input) //if the file is opened successfully
