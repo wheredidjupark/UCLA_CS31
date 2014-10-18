@@ -100,3 +100,81 @@ By October 12, there will be a link on the class webpage that will enable you to
 The writeup Some Things about Strings tells you what you need to know about strings for this project.
 
 As you develop your program, periodically try it out under another compiler (g++ if you're doing your primary development using Visual C++, or Visual C++ if you're doing your primary development using g++ (e.g., with Xcode on a Mac)). Sometimes one compiler will warn you about something that another is silent about, so you may be able to find and fix more errors sooner. If running your program under both environments with the same input gives you different results, your program is probably relying on undefined behavior (such as using the value of an uninitialized variable), which we prohibit.
+
+
+Project 2 FAQ
+
+Do I have to blah blah blah? Is it OK to blah blah blah?
+
+One skill you'll need as a professional in whatever technical field you're in is the ability to read a technical specification. If your question is about what your program is required or permitted to do, then if you carefully re-read the Project 2 spec with your question in mind, you'll probably find that there's a sentence or two that answers it. If after re-reading the spec, you still don't know whether that thing is required or permitted, then ask us. If we think the answer to your question is right there in the spec, our answer may be merely The spec says: [some sentence we quote from the spec]. If that happens, use that as an opportunity to improve your technical reading skills by analyzing why you didn't see that yourself even though that was what you were looking for.
+
+How do I return from main() other than by reaching the end of it?
+
+You can do something like this:
+
+	int main()
+	{
+	    do some stuff
+	    if (something bad happened)
+	    {
+	        write an error message
+	        return 1;    // non-zero value means failure
+	    }
+	    do some more stuff
+	}
+If something bad happens, this will write an error message and terminate the program without doing some more stuff.
+
+When I run my program, why does the dialog proceed like this?
+
+
+	Units sold: 458
+	Title: Sales price: 14.98
+	Expense: 8.83
+	Premium item? (y/n): y
+	---
+	You must enter a title.
+or like this
+
+
+	Units sold: 458
+	Title: ---
+	You must enter a title.
+Why didn't it give me a chance to type the title?
+
+
+If you had read the Some Things about Strings writeup, you'd know why. (Look at the discussion of the Floral Tapestry example and the use of cin.ignore(…).)
+
+Should the very last character that my program writes be a newline?
+
+It won't matter to our grading tool, but it's better style. In other words, if the last line your program is going to write in some cases is You must enter a title., then saying
+
+	cout << "You must enter a title." << endl;
+or
+
+	cout << "You must enter a title.\n";
+is better than
+
+	cout << "You must enter a title.";
+with no further output. Oh, and don't worry about the Press any key to continue message. That's something the Visual Studio environment writes after your program finishes, but the way our grading tool runs your program, that message isn't produced.
+
+I wrote the program and now I'm trying to get it to work. It's not reading the input correctly, it's printing multiple messages, and many output numbers are wrong. What can I do?
+
+Most importantly, learn this lesson from your mistake: You should develop your programs incrementally. It seems that you did not do this; instead, you wrote a lot of code and then tried to test it, so all the problems with your code are hitting you at once.
+
+It may seem like a step backward, but what you should do is start over again. Create a new project and solve a simplified version of the problem. For example, assume the user will always enter correct input, and have your program use a very simple royalty formula (e.g., the royalty is always 8% for all units sold). Get that working, making sure the format of any output you write is correct. Once you get that working, enhance the program to check for negative units sold, and make sure your code does what's required for both negative and nonnegative amounts. Then add checking for an empty title string and test the code. Continuing to add error-checking code in this fashion, you should end up with a program that does everything except compute the right royalty amount in the case of valid input.
+
+That's a good state to be in, because now you know the only thing you have to do is change the computation of the royalty; that's independent of everything else you've written and know to be correct. Since the actual royalty calculation rules are complex, continue by implementing a simplification that's only a little more complex than your original simplification. For example, ignore the premium status. Get that working. Add in correctly handling the premium status . Get that working. You're done!
+
+At each step where you've got something working, save a copy of the program. That way, if you mangle things up in the next phase, or you run out of time, you'll be able to turn in a program that will compile and pass at least some of our test cases. That beats getting a zero for correctness!
+
+If the expense is negative and the sales price is even more negative than the expense, which message must appear after the line of three hyphens?
+
+Let's decree that the message in that case must be:
+
+	The expense must be nonnegative.
+I've tested my program thoroughly and I believe my program is behaving the way it's required to. How can I shake the feeling I have, though, that I might have overlooked something fundamental that will cost me a lot of correctness points when your testing script runs it?
+
+Follow the instructions in the g++ with Linux writeup to run your program on the SEASnet Linux server. Then, when you are satisfied that it works, run this command on that server:
+
+	curl -s http://cs.ucla.edu/classes/fall12/cs31/Utilities/p2tester | bash
+It will test your program on a couple of cases in the manner that our testing script will. (Of course, our testing script will test many more cases than just a couple.)
