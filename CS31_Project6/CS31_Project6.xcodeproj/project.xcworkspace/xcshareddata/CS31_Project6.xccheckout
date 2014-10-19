@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>122691D9-C165-4E07-8BFE-BBDB8FE67AAE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CS31_Project6</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>25999E3E4AD7131A9167CE592B3016D2477CA5EA</key>
+		<string>github.com:wheredidjupark/CS31.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CS31_Project6/CS31_Project6.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>25999E3E4AD7131A9167CE592B3016D2477CA5EA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:wheredidjupark/CS31.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>25999E3E4AD7131A9167CE592B3016D2477CA5EA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>25999E3E4AD7131A9167CE592B3016D2477CA5EA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CS31</string>
+		</dict>
+	</array>
+</dict>
+</plist>

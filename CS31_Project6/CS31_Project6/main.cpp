@@ -119,7 +119,7 @@ int main() //DO NOT CHANGE ANYTHING IN THE MAIN ROUTINE...
 */
 
 //Problem 1.b Solution
-//findMax puts the corect value of pToMax, but pToMax is a copy of the caller's variable ptr, so the function findMax has no effect on ptr.
+//findMax puts the corect value of pToMax, but pToMax is a copy of the caller's variable ptr, so the function findMax has no effect on ptr. The codes below solves the problem.
 /*
 #include <iostream>
 using namespace std;
