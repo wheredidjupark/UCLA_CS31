@@ -1,4 +1,3 @@
-UCLA_CS31
+UCLA CS31
 =========
-Done in C++.
-Self-taught.
+Assignments are done using C++ programming language.
